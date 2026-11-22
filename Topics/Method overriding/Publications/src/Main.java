@@ -24,6 +24,7 @@ class Newspaper extends Publication {
     // write your code here
 
 }
+Guths
 
 class Article extends Publication {
 
