@@ -21,10 +21,17 @@ class Newspaper extends Publication {
         this.source = source;
     }
 
+    public Newspaper(String title) {
+        super(title);
+    }
+
+    @Override
+    public String getDetails() {
+        return super.getDetails() + ", " + "source=\"" + source + "\"";
+    }
     // write your code here
 
 }
-
 
 class Article extends Publication {
 
@@ -35,6 +42,14 @@ class Article extends Publication {
         this.author = author;
     }
 
+    public Article(String title) {
+        super(title);
+    }
+
+    @Override
+    public String getDetails() {
+        return super.getDetails() + ", " + "author=\"" + author + "\"";
+    }
     // write your code here
 
 }
@@ -46,6 +61,15 @@ class Announcement extends Publication {
     public Announcement(String title, int daysToExpire) {
         super(title);
         this.daysToExpire = daysToExpire;
+    }
+
+    public Announcement(String title) {
+        super(title);
+    }
+
+    @Override
+    public String getDetails() {
+        return super.getDetails() + ", daysToExpire=" + daysToExpire;
     }
 
     // write your code here
